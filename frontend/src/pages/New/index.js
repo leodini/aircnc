@@ -23,7 +23,7 @@ export default function New({history}){
         data.append('company', company);
         data.append('techs', techs);
         data.append('price', price);
-        const response = await api.post('/spots', data, {
+        await api.post('/spots', data, {
             headers: {user_id}
         });
         history.push('/dashboard');
